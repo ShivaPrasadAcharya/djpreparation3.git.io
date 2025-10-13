@@ -4,7 +4,7 @@
     const noteUNested = [
         {
             key: 'noteU1', label: 'NoteU1', items: [
-                ...['noteU11', 'noteU12', 'noteU13'].map(k => ({
+                ...['noteU11', 'noteU12', 'noteU13', 'noteU14', 'noteU15'].map(k => ({
                     key: k,
                     label: k.replace('noteU', 'NoteU'),
                     emoji: window[`${k}Meta`]?.emoji || '',
@@ -14,7 +14,7 @@
         },
         {
             key: 'noteU2', label: 'NoteU2', items: [
-                ...['noteU21', 'noteU22'].map(k => ({
+                ...['noteU21', 'noteU22', 'noteU13', 'noteU14', 'noteU15'].map(k => ({
                     key: k,
                     label: k.replace('noteU', 'NoteU'),
                     emoji: window[`${k}Meta`]?.emoji || '',
@@ -24,7 +24,17 @@
         },
         {
             key: 'noteU3', label: 'NoteU3', items: [
-                ...['noteU31', 'noteU32'].map(k => ({
+                ...['noteU31', 'noteU32', 'noteU13', 'noteU14', 'noteU15'].map(k => ({
+                    key: k,
+                    label: k.replace('noteU', 'NoteU'),
+                    emoji: window[`${k}Meta`]?.emoji || '',
+                    content: window[`${k}Content`]
+                }))
+            ]
+        },
+        {
+            key: 'noteU4', label: 'NoteU4', items: [
+                ...['noteU41', 'noteU42', 'noteU43', 'noteU44', 'noteU45'].map(k => ({
                     key: k,
                     label: k.replace('noteU', 'NoteU'),
                     emoji: window[`${k}Meta`]?.emoji || '',
