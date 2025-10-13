@@ -1,0 +1,537 @@
+/* styles2.css - Enhanced dropdown styles for ribbon bar-video, html, md */
+
+.videos-ribbon-dropdown, .html-ribbon-dropdown, .md-ribbon-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.videos-ribbon-btn, .html-ribbon-btn, .md-ribbon-btn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #f0f2f5 80%, #e0e7ff 100%);
+  color: #222;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.videos-ribbon-btn:hover, .html-ribbon-btn:hover, .md-ribbon-btn:hover {
+  background: linear-gradient(90deg, #e0e7ff 60%, #f0f2f5 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* NoteX dropdown button and submenu styles */
+
+.html-ribbon-btn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #f0f2f5 80%, #e0e7ff 100%);
+  color: #222;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.html-ribbon-btn:hover {
+  background: linear-gradient(90deg, #e0e7ff 60%, #f0f2f5 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.html-ribbon-dropdown > div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  min-width: 180px;
+  z-index: 1001;
+  padding: 4px 0;
+  border: 1px solid #e5e7eb;
+  animation: dropdownFadeIn 0.18s;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.videos-ribbon-dropdown:hover > div,
+.html-ribbon-dropdown:hover > div,
+.md-ribbon-dropdown:hover > div {
+  display: block !important;
+}
+
+.videos-ribbon-dropdown:focus-within > div,
+.html-ribbon-dropdown:focus-within > div,
+.md-ribbon-dropdown:focus-within > div {
+  display: block !important;
+}
+
+.videos-ribbon-dropdown button.files-dropdown-item,
+.html-ribbon-dropdown button.files-dropdown-item,
+.md-ribbon-dropdown button.files-dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 18px;
+  font-size: 1.08em;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+.videos-ribbon-dropdown button.files-dropdown-item:hover,
+.html-ribbon-dropdown button.files-dropdown-item:hover,
+.md-ribbon-dropdown button.files-dropdown-item:hover {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}
+
+/* NoteZ (txt) dropdown styles */
+.txt-ribbon-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.txt-ribbon-btn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #f0f2f5 80%, #e0e7ff 100%);
+  color: #222;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.txt-ribbon-btn:hover, .txt-ribbon-btn:focus {
+  background: linear-gradient(90deg, #e0e7ff 60%, #f0f2f5 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.txt-ribbon-dropdown > div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  min-width: 120px;
+  z-index: 1001;
+  padding: 8px 0;
+  border: 1px solid #e5e7eb;
+  animation: dropdownFadeIn 0.18s;
+}
+.txt-ribbon-dropdown:hover > div,
+.txt-ribbon-dropdown:focus-within > div {
+  display: block !important;
+}
+.txt-ribbon-dropdown button.files-dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 18px;
+  font-size: 1.08em;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+.txt-ribbon-dropdown button.files-dropdown-item:hover {
+  background: #e0e7ff;
+  color: #1d4ed8;
+}
+
+/* Plaintext search bar and highlight styles */
+.txt-search-highlight {
+  background: #e0e7ff;
+  color: #1d4ed8;
+  border-radius: 3px;
+  padding: 1px 2px;
+}
+.txt-search-current {
+  background: #ff6b6b !important;
+  color: #fff !important;
+}
+.txt-html-search-bar .txt-search-input {
+  width: 40%;
+  min-width: 120px;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .videos-ribbon-btn, .html-ribbon-btn, .md-ribbon-btn {
+    padding: 8px 10px;
+    font-size: 1em;
+  }
+  .videos-ribbon-dropdown > div,
+  .html-ribbon-dropdown > div,
+  .md-ribbon-dropdown > div {
+    min-width: 110px;
+  }
+  .videos-ribbon-dropdown button.files-dropdown-item,
+  .html-ribbon-dropdown button.files-dropdown-item,
+  .md-ribbon-dropdown button.files-dropdown-item {
+    font-size: 1em;
+    padding: 7px 10px;
+    min-width: 90px;
+  }
+  .toc-container {
+    padding: 8px 6px 6px 10px;
+    font-size: 0.98em;
+  }
+  .txt-ribbon-btn {
+    padding: 8px 10px;
+    font-size: 1em;
+  }
+  .txt-ribbon-dropdown > div {
+    min-width: 90px;
+  }
+  .txt-ribbon-dropdown button.files-dropdown-item {
+    font-size: 1em;
+    padding: 7px 10px;
+    min-width: 70px;
+  }
+  .txt-html-search-bar .txt-search-input {
+    width: 90%;
+    min-width: 60px;
+  }
+}
+
+/* NoteW dropdown styles */
+.md-ribbon-dropdown-w {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.md-ribbon-btn-w {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #e0f7fa 80%, #b2ebf2 100%);
+  color: #00796b;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.md-ribbon-btn-w:hover {
+  background: linear-gradient(90deg, #b2ebf2 60%, #e0f7fa 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.md-ribbon-dropdown-w > div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  min-width: 120px;
+  z-index: 1001;
+  padding: 8px 0;
+  border: 1px solid #b2ebf2;
+  animation: dropdownFadeIn 0.18s;
+}
+.md-ribbon-dropdown-w:hover > div,
+.md-ribbon-dropdown-w:focus-within > div {
+  display: block !important;
+}
+.md-ribbon-dropdown-w button.files-dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 18px;
+  font-size: 1.08em;
+  color: #00796b;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+.md-ribbon-dropdown-w button.files-dropdown-item:hover {
+  background: #e0f7fa;
+  color: #004d40;
+}
+
+/* NoteW markdown search highlight styles */
+.md-search-highlight {
+  background: #e0f7fa;
+  color: #00796b;
+  border-radius: 3px;
+  padding: 1px 2px;
+}
+.md-search-current {
+  background: #00796b !important;
+  color: #fff !important;
+}
+
+/* NoteU dropdown styles */
+.noteu-dropdown {
+  display: inline-block;
+  position: relative;
+  margin-left: 8px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: box-shadow 0.2s;
+}
+.noteu-btn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #e0e7ff 80%, #f0f2f5 100%);
+  color: #222;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  outline: none;
+}
+.noteu-btn:focus, .noteu-btn:hover {
+  background: linear-gradient(90deg, #f0f2f5 60%, #e0e7ff 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  transform: translateY(-2px) scale(1.03);
+}
+.noteu-dropdown > div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  min-width: 160px;
+  z-index: 1001;
+  padding: 8px 0;
+  border: 1px solid #e5e7eb;
+  animation: dropdownFadeIn 0.18s;
+}
+.noteu-dropdown:hover > div,
+.noteu-dropdown:focus-within > div {
+  display: block !important;
+}
+.noteu-dropdown button.noteu-dropdown-item {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 22px;
+  font-size: 1.08em;
+  color: #333;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  min-width: 140px;
+  box-sizing: border-box;
+  outline: none;
+}
+.noteu-dropdown button.noteu-dropdown-item:focus, .noteu-dropdown button.noteu-dropdown-item:hover {
+  background: #e0e7ff;
+  color: #1d4ed8;
+  transform: scale(1.03);
+}
+
+/* NoteU1 and NoteU2 nested dropdown styles */
+.noteu1-dropdown, .noteu2-dropdown {
+  display: block;
+  position: relative;
+  margin-bottom: 4px;
+}
+.noteu1-btn, .noteu2-btn {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 18px;
+  border: none;
+  background: #e0e7ff;
+  margin-bottom: 2px;
+  font-size: 1em;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  outline: none;
+}
+.noteu1-btn:focus, .noteu1-btn:hover,
+.noteu2-btn:focus, .noteu2-btn:hover {
+  background: #f0f2f5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transform: scale(1.03);
+}
+.noteu1-dropdown > div, .noteu2-dropdown > div {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  min-width: 140px;
+  z-index: 1002;
+  padding: 8px 0;
+  border: 1px solid #e5e7eb;
+  animation: dropdownFadeIn 0.18s;
+}
+.noteu1-dropdown:hover > div,
+.noteu1-dropdown:focus-within > div,
+.noteu2-dropdown:hover > div,
+.noteu2-dropdown:focus-within > div {
+  display: block !important;
+}
+@media (max-width: 600px) {
+  .noteu-btn {
+    padding: 8px 10px;
+    font-size: 1em;
+  }
+  .noteu-dropdown > div {
+    min-width: 100px;
+  }
+  .noteu-dropdown button.noteu-dropdown-item {
+    font-size: 1em;
+    padding: 7px 10px;
+    min-width: 70px;
+  }
+  .noteu1-btn, .noteu2-btn {
+    padding: 7px 10px;
+    font-size: 0.98em;
+  }
+  .noteu1-dropdown > div, .noteu2-dropdown > div {
+    min-width: 90px;
+  }
+}
+
+/* NoteU markdown table styles - improved */
+.md-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 1em;
+}
+.md-table th, .md-table td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  text-align: left;
+}
+.md-table th {
+  background: #c7d2fe;
+  color: #1e293b;
+  font-weight: bold;
+}
+.md-table tr:nth-child(even) td {
+  background: #f3f4f6;
+}
+.md-table tr:nth-child(odd) td {
+  background: #fff;
+}
+.toc-container {
+  background: #e0e7ff;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin-bottom: 18px;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.toc-link {
+  color: #2563eb;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.toc-back-link {
+  font-size: 0.9em;
+  color: #2563eb;
+  margin-left: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Markdown code block styles for NoteU */
+pre code {
+  display: block;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.98em;
+  margin: 12px 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+span[style*="text-decoration:underline;"] {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+/* NoteU search highlight styles */
+.noteu-search-highlight {
+  background: #fef9c3;
+  color: #be185d;
+  border-radius: 3px;
+  padding: 1px 2px;
+}
+.noteu-search-current {
+  background: #be185d !important;
+  color: #fff !important;
+}
+.noteu-html-search-bar .noteu-search-input {
+  width: 40%;
+  min-width: 120px;
+  max-width: 100%;
+}
+
+/* Sticky/fixed search bar for NoteU */
+.noteu-html-search-bar.sticky-noteu-html-search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1003;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (max-width: 600px) {
+  .noteu-html-search-bar .noteu-search-input {
+    width: 90%;
+    min-width: 60px;
+  }
+}
