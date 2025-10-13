@@ -96,7 +96,7 @@ DataApp.prototype.getHTML = function() {
     return `
         <div class="container">
             <div class="header">
-                <h2>🗃️DJ Preparation Management System III(DJ3)</h2>
+                <h2>🗃️DJ Preparation MS III(DJ3)</h2>
                 <p>Developed by: शिवप्रसाद आचार्य (२०८२, विजयादशमी) </p>
             </div>
 
