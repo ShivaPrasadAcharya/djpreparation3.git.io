@@ -96,8 +96,8 @@ DataApp.prototype.getHTML = function() {
     return `
         <div class="container">
             <div class="header">
-                <h2>🗃️Sample of Management System(SMS)</h2>
-                <p>Developed by: शिवप्रसाद आचार्य (२०८२, श्रीकृष्णजन्माष्टमी) </p>
+                <h2>🗃️DJ Preparation Management System III(DJ3)</h2>
+                <p>Developed by: शिवप्रसाद आचार्य (२०८२, विजयादशमी) </p>
             </div>
 
             <div class="sticky-search">
