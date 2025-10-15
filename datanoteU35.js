@@ -1,5 +1,6 @@
 // dataWmarkdown3.js
 window.noteU35Content = `
+
 # 3.e Judicial Principles: Conviction and Sentencing
 ## Theoretical Foundations and Practical Application for Judges
 
