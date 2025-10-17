@@ -31,7 +31,7 @@ window.noteU34Content = `
 ---
 `;
 window.noteU34Meta = { 
-  name: "See trial content",
+  name: "Evidence Law",
   emoji: "📄"
 };
 

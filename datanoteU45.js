@@ -4,7 +4,7 @@ window.noteU45Content = `
 
 `;
 window.noteU45Meta = { 
-  name: "writing tips",
+  name: "Q & A",
   emoji: "📄"
 };
 

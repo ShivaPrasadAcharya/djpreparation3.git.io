@@ -4,7 +4,7 @@ window.noteU43Content = `
 
 `;
 window.noteU43Meta = { 
-  name: "See trial content",
+  name: "Q & A",
   emoji: "📄"
 };
 

@@ -2968,7 +2968,7 @@ That means you're likely already doing the hard work of seeking justice.
 
 `;
 window.noteU33Meta = { 
-  name: "See trial content",
+  name: "Criminal Procedural Law",
   emoji: "📄"
 };
 

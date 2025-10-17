@@ -183,6 +183,6 @@ The question is not whether to choose one paradigm but how to wisely deploy all 
 
 `;
 window.noteU13Meta = {
-  name: "NoteW Example",
+  name: "Justice, PIL, IL",
   emoji: "📝"
 };

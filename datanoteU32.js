@@ -31,7 +31,7 @@ window.noteU32Content = `
 ---
 `;
 window.noteU32Meta = { 
-  name: "See trial content",
+  name: "Criminal Offences",
   emoji: "📄"
 };
 

@@ -12,6 +12,6 @@ It demonstrates the use of plain text for legal study notes.
 End of sample 2.
 `;
 window.noteU22Meta = {
-  name: "NoteU22",
+  name: "Family Law & Contract Law",
   emoji: "📘"
 };

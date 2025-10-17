@@ -34,6 +34,6 @@ These are two of the most influential theories in the philosophy of rights, and 
 ### Deeper Dive into the Theories
 `;
 window.noteU12Meta = {
-  name: "NoteU12",
+  name: "CON, ROL, SOP, FR",
   emoji: "📒"
 };

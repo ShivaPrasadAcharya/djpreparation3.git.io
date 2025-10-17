@@ -2204,7 +2204,7 @@ Seeking help is strength and professionalism.
 **Go forth and judge with integrity.**
 `;
 window.noteU35Meta = { 
-  name: "See trial content",
+  name: "Punishment & Sentencing",
   emoji: "📄"
 };
 

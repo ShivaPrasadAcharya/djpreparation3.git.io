@@ -14257,6 +14257,6 @@ You earned it not through perfection, but through integrity.
 
 `;
 window.noteU14Meta = {
-  name: "NoteW Example",
+  name: "Law & Morality, code of conduct, ",
   emoji: "📝"
 };

@@ -17,6 +17,6 @@ window.noteU31Content = `
 **there is underline text above this line**
 `;
 window.noteU31Meta = { 
-  name: "table content",
+  name: "Criminal Law: Doctrine & VJS",
    emoji: "📄"
    };
