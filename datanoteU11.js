@@ -5,6 +5,6 @@ window.noteU11Content = `
 This is the content for NoteU11 in markdown format.
 `;
 window.noteU11Meta = {
-  name: "NoteU11",
-  emoji: "📝"
+  name: "JP",
+  emoji: "§Emoji"
 };
