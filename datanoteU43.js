@@ -16496,10 +16496,6 @@ As the judge, how will you individualize the sentences for each convict? Explain
 (10 Marks)
 
 
-
-
-
-
 `;
 window.noteU43Meta = { 
   name: "Q & A",
