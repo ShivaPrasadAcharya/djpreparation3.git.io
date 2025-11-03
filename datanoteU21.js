@@ -25,6 +25,6 @@ It demonstrates the use of plain text for legal study notes.
 End of sample 2.
 `;
 window.noteU21Meta = {
-  name: "Person & Pvt. Int.Law",
+  name: "Person & Pvt. Int.Law-no",
   emoji: "📔"
 };

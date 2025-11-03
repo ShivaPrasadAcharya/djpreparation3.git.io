@@ -13,5 +13,5 @@ End of sample 2.
 `;
 window.noteU23Meta = {
   name: "Property Law",
-  emoji: "📘"
+  emoji: "📘no"
 };

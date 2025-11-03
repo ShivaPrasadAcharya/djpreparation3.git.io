@@ -16,6 +16,6 @@ window.noteU15Content = `
 ---
 `;
 window.noteU15Meta = {
-  name: "Court & Case Magmt",
-  emoji: "📝"
+  name: "Court & Case Magmt-no",
+  emoji: "📝no"
 };

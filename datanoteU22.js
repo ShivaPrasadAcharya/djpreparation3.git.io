@@ -13,5 +13,5 @@ End of sample 2.
 `;
 window.noteU22Meta = {
   name: "Family Law & Contract Law",
-  emoji: "📘"
+  emoji: "📘no"
 };

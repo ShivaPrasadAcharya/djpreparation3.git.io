@@ -4092,7 +4092,7 @@ The law speaks through courts, not through procedures. When the Supreme Court pr
 
 `;
 window.noteU41Meta = { 
-  name: "Q & A 1",
+  name: "Q & A 1-BOP",
   emoji: "📄"
 };
 

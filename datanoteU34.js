@@ -32,6 +32,6 @@ window.noteU34Content = `
 `;
 window.noteU34Meta = { 
   name: "Evidence Law",
-  emoji: "📄"
+  emoji: "📄no"
 };
 

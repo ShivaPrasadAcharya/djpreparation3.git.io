@@ -13,5 +13,5 @@ End of sample 2.
 `;
 window.noteU24Meta = {
   name: "Civil Procedural Law",
-  emoji: "📘"
+  emoji: "📘no"
 };

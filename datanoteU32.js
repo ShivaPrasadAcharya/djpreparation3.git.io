@@ -32,6 +32,6 @@ window.noteU32Content = `
 `;
 window.noteU32Meta = { 
   name: "Criminal Offences",
-  emoji: "📄"
+  emoji: "📄no"
 };
 

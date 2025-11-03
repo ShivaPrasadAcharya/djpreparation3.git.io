@@ -13,5 +13,5 @@ End of sample 2.
 `;
 window.noteU25Meta = {
   name: "Civil Procedure & Hearing ",
-  emoji: "📘"
+  emoji: "📘no"
 };

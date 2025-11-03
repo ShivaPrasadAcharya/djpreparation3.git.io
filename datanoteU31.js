@@ -18,5 +18,5 @@ window.noteU31Content = `
 `;
 window.noteU31Meta = { 
   name: "Criminal Law: Doctrine & VJS",
-   emoji: "📄"
+   emoji: "📄no"
    };
