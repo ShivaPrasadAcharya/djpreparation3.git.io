@@ -1,4 +1,6 @@
 var data5Url3 = `sno,subject,description,shorturl,longurl
+01,Attorney General, Prof. Immunity and Autonomy misuse, open news,https://www.ratopati.com/story/523821/repeated-abuse-of-power-by-the-attorney-general-impunity-for-serious-crimes
+
 `;
 
 // Dataset metadata
