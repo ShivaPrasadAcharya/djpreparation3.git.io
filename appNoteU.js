@@ -3,7 +3,7 @@
     // --- Define dropdown hierarchy for NoteU sections ---
     const noteUNested = [
         {
-            key: 'noteU1', label: 'NoteU1', items: [
+            key: 'noteU1', label: 'JP', items: [
                 ...['noteU11', 'noteU12', 'noteU13', 'noteU14', 'noteU15'].map(k => ({
                     key: k,
                     label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
@@ -13,7 +13,7 @@
             ]
         },
         {
-            key: 'noteU2', label: 'NoteU2', items: [
+            key: 'noteU2', label: 'Civil', items: [
                 ...['noteU21', 'noteU22', 'noteU23', 'noteU24', 'noteU25'].map(k => ({
                     key: k,
                     label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
@@ -23,7 +23,7 @@
             ]
         },
         {
-            key: 'noteU3', label: 'NoteU3', items: [
+            key: 'noteU3', label: 'Criminal', items: [
                 ...['noteU31', 'noteU32', 'noteU33', 'noteU34', 'noteU35'].map(k => ({
                     key: k,
                     label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
@@ -33,7 +33,7 @@
             ]
         },
         {
-            key: 'noteU4', label: 'NoteU4', items: [
+            key: 'noteU4', label: 'Misil', items: [
                 ...['noteU41', 'noteU42', 'noteU43', 'noteU44', 'noteU45'].map(k => ({
                     key: k,
                     label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
