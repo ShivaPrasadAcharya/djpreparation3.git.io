@@ -48,6 +48,33 @@
         return toc + html;
     }
 
+    // Parse a full HTML document string and extract head styles/links/scripts and body HTML
+    function parseHtmlDocument(raw) {
+        try {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(raw, 'text/html');
+            var bodyHtml = doc.body ? doc.body.innerHTML : raw;
+            var title = (doc.querySelector('title') || {}).textContent || '';
+            var styles = [];
+            // inline <style>
+            Array.from(doc.querySelectorAll('style')).forEach(function(s) {
+                styles.push({type: 'style', content: s.textContent});
+            });
+            // <link rel="stylesheet">
+            Array.from(doc.querySelectorAll('link[rel="stylesheet"]')).forEach(function(l) {
+                if (l.href) styles.push({type: 'link', href: l.href});
+            });
+            var scripts = [];
+            Array.from(doc.querySelectorAll('script')).forEach(function(s) {
+                if (s.src) scripts.push({src: s.src});
+                else if (s.textContent && s.textContent.trim()) scripts.push({code: s.textContent});
+            });
+            return {bodyHtml: bodyHtml, title: title, styles: styles, scripts: scripts};
+        } catch (e) {
+            return {bodyHtml: raw, title: '', styles: [], scripts: []};
+        }
+    }
+
     function getAllHtmlFiles() {
         var files = [];
         for (var key in window) {
@@ -57,12 +84,22 @@
                 var meta = window['html' + idx + 'Meta'] || {};
                 var label = (meta.name && meta.name.trim()) ? meta.name : ('html' + idx);
                 var emoji = (meta.emoji && meta.emoji.trim()) ? meta.emoji + ' ' : '';
+                // allow the html content to be either a fragment or a whole document
+                var raw = window[key];
+                var parsed = {bodyHtml: raw, title: '', styles: [], scripts: []};
+                if (/<!doctype|<html\b/i.test(raw)) {
+                    parsed = parseHtmlDocument(raw);
+                }
                 files.push({
                     key: 'html' + idx,
                     label: label,
                     emoji: emoji,
                     type: 'html',
-                    content: window[key]
+                    content: parsed.bodyHtml,
+                    _htmlTitle: parsed.title,
+                    _htmlStyles: parsed.styles,
+                    _htmlScripts: parsed.scripts,
+                    _raw: raw
                 });
             }
         }
@@ -255,6 +292,50 @@
                     '</ul></div>';
             }
             htmlContent.innerHTML = toc + div.innerHTML;
+
+            // Remove previously injected html assets
+            Array.from(document.querySelectorAll('[data-html-owner]')).forEach(function(n) { n.remove(); });
+
+            // Inject styles from the parsed HTML (avoid duplicates)
+            try {
+                if (file && file._htmlStyles && file._htmlStyles.length > 0) {
+                    file._htmlStyles.forEach(function(s, i) {
+                        if (s.type === 'style') {
+                            var st = document.createElement('style');
+                            st.setAttribute('data-html-owner', file.key);
+                            st.textContent = s.content;
+                            document.head.appendChild(st);
+                        } else if (s.type === 'link' && s.href) {
+                            var l = document.createElement('link');
+                            l.rel = 'stylesheet';
+                            l.href = s.href;
+                            l.setAttribute('data-html-owner', file.key);
+                            document.head.appendChild(l);
+                        }
+                    });
+                }
+            } catch (e) {}
+
+            // Inject scripts (external and inline) into the content area so they execute
+            try {
+                if (file && file._htmlScripts && file._htmlScripts.length > 0) {
+                    file._htmlScripts.forEach(function(s, i) {
+                        var sc = document.createElement('script');
+                        sc.setAttribute('data-html-owner', file.key);
+                        if (s.src) {
+                            sc.src = s.src;
+                            sc.async = false;
+                        } else if (s.code) {
+                            sc.textContent = s.code;
+                        }
+                        htmlContent.appendChild(sc);
+                    });
+                }
+            } catch (e) {}
+
+            // Set document title if the HTML provided one
+            try { if (file && file._htmlTitle) document.title = file._htmlTitle; } catch (e) {}
+
             // Auto-render Mermaid flowcharts if present
             var mermaidDivs = htmlContent.querySelectorAll('.mermaid');
             if (mermaidDivs.length > 0) {
