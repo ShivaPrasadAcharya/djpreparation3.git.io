@@ -41,6 +41,16 @@
                     content: window[`${k}Content`]
                 }))
             ]
+        },
+        {
+            key: 'noteU5', label: 'Karki Aayog', items: [
+                ...['noteU51', 'noteU52', 'noteU53', 'noteU54', 'noteU55'].map(k => ({
+                    key: k,
+                    label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
+                    emoji: window[`${k}Meta`]?.emoji || '',
+                    content: window[`${k}Content`]
+                }))
+            ]
         }
     ];
 
