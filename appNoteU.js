@@ -273,23 +273,24 @@
         const mdContent = root.querySelector('.markdown-content');
         mdContent.innerHTML = simpleMarkdownToHtml(content);
 
-        // Add floating TOC arrow button if TOC exists
-        if (mdContent.querySelector('#toc-top')) {
-            const tocBtn = document.createElement('button');
-            tocBtn.id = 'floating-toc-btn';
-            tocBtn.innerHTML = '&#8593;';
-            tocBtn.title = 'Go to Table of Contents';
-            tocBtn.className = 'floating-toc-btn';
-            tocBtn.onclick = function() {
-                const toc = mdContent.querySelector('#toc-top');
-                if (toc) toc.scrollIntoView({behavior: 'smooth'});
-            };
-            mdContent.appendChild(tocBtn);
-        }
-
         if (window.noteUSearchBar) {
             window.noteUSearchBar(root.querySelector('.data-section'), noteKey, () => simpleMarkdownToHtml(content));
         }
+
+        // Ensure single floating TOC button appended to body (search may re-render content)
+        (function() {
+            var existing = document.getElementById('floating-toc-btn');
+            if (existing) existing.remove();
+            var tocEl = mdContent.querySelector('#toc-top');
+            if (!tocEl) return;
+            var btn = document.createElement('button');
+            btn.id = 'floating-toc-btn';
+            btn.innerHTML = '&#8593;';
+            btn.title = 'Go to Table of Contents';
+            btn.className = 'floating-toc-btn';
+            btn.onclick = function() { tocEl.scrollIntoView({behavior:'smooth'}); };
+            document.body.appendChild(btn);
+        })();
     }
 
     // --- Add styles for floating TOC button (print-safe) ---

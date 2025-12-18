@@ -273,19 +273,20 @@
         mdContent.innerHTML = simpleMarkdownToHtml(content);
         addMarkdownSearch(container, mdKey);
         
-        // Add floating TOC arrow button
-        if (mdContent.querySelector('#toc-top')) {
-            var tocBtn = document.createElement('button');
-            tocBtn.id = 'floating-toc-btn';
-            tocBtn.innerHTML = '&#8593;';
-            tocBtn.title = 'Go to Table of Contents';
-            tocBtn.className = 'floating-toc-btn';
-            tocBtn.onclick = function() {
-                var toc = mdContent.querySelector('#toc-top');
-                if (toc) toc.scrollIntoView({behavior: 'smooth'});
-            };
-            mdContent.appendChild(tocBtn);
-        }
+        // Ensure single floating TOC button appended to body (after search may re-render content)
+        (function() {
+            var existing = document.getElementById('floating-toc-btn');
+            if (existing) existing.remove();
+            var tocEl = container.querySelector('#toc-top');
+            if (!tocEl) return;
+            var btn = document.createElement('button');
+            btn.id = 'floating-toc-btn';
+            btn.innerHTML = '&#8593;';
+            btn.title = 'Go to Table of Contents';
+            btn.className = 'floating-toc-btn';
+            btn.onclick = function() { tocEl.scrollIntoView({behavior:'smooth'}); };
+            document.body.appendChild(btn);
+        })();
     }
 
     function tryInjectMdMenu() {

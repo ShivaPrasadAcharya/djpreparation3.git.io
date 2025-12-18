@@ -358,7 +358,23 @@
                 });
             }
         }
+        // Initialize search and highlights first (it may replace content)
         addHtmlSearch(container, htmlKey);
+
+        // Ensure single floating TOC button appended to body (search may re-render content)
+        (function() {
+            var existing = document.getElementById('floating-toc-btn');
+            if (existing) existing.remove();
+            var tocEl = container.querySelector('#toc-top');
+            if (!tocEl) return;
+            var btn = document.createElement('button');
+            btn.id = 'floating-toc-btn';
+            btn.innerHTML = '&#8593;';
+            btn.title = 'Go to Table of Contents';
+            btn.className = 'floating-toc-btn';
+            btn.onclick = function() { tocEl.scrollIntoView({behavior:'smooth'}); };
+            document.body.appendChild(btn);
+        })();
     }
 
     function tryInjectHtmlMenu() {
