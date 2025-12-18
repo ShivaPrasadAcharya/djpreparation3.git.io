@@ -273,10 +273,29 @@
         const mdContent = root.querySelector('.markdown-content');
         mdContent.innerHTML = simpleMarkdownToHtml(content);
 
+        // Add floating TOC arrow button if TOC exists
+        if (mdContent.querySelector('#toc-top')) {
+            const tocBtn = document.createElement('button');
+            tocBtn.id = 'floating-toc-btn';
+            tocBtn.innerHTML = '&#8593;';
+            tocBtn.title = 'Go to Table of Contents';
+            tocBtn.className = 'floating-toc-btn';
+            tocBtn.onclick = function() {
+                const toc = mdContent.querySelector('#toc-top');
+                if (toc) toc.scrollIntoView({behavior: 'smooth'});
+            };
+            mdContent.appendChild(tocBtn);
+        }
+
         if (window.noteUSearchBar) {
             window.noteUSearchBar(root.querySelector('.data-section'), noteKey, () => simpleMarkdownToHtml(content));
         }
     }
+
+    // --- Add styles for floating TOC button (print-safe) ---
+    const style = document.createElement('style');
+    style.textContent = `.floating-toc-btn { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: #ff6b6b; color: #fff; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; transition: background 0.3s, transform 0.2s; } .floating-toc-btn:hover { background: #ff5252; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); } .floating-toc-btn:active { transform: translateY(0); } @media print { .floating-toc-btn { display: none !important; } } @media (max-width: 600px) { .floating-toc-btn { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 20px; } }`;
+    document.head.appendChild(style);
 
     // --- Auto-inject dropdown when DOM ready ---
     function tryInjectNoteU() { injectNoteUDropdown(); }

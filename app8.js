@@ -293,6 +293,20 @@
             }
             htmlContent.innerHTML = toc + div.innerHTML;
 
+            // Add floating TOC arrow button if TOC exists
+            if (toc) {
+                var tocBtn = document.createElement('button');
+                tocBtn.id = 'floating-toc-btn';
+                tocBtn.innerHTML = '&#8593;';
+                tocBtn.title = 'Go to Table of Contents';
+                tocBtn.className = 'floating-toc-btn';
+                tocBtn.onclick = function() {
+                    var tocTop = htmlContent.querySelector('#toc-top');
+                    if (tocTop) tocTop.scrollIntoView({behavior: 'smooth'});
+                };
+                htmlContent.appendChild(tocBtn);
+            }
+
             // Remove previously injected html assets
             Array.from(document.querySelectorAll('[data-html-owner]')).forEach(function(n) { n.remove(); });
 
@@ -365,9 +379,9 @@
     });
     observer.observe(document.body, { childList: true, subtree: true });
 
-    // Add styles for highlight and responsive search bar
+    // Add styles for highlight, responsive search bar, and floating TOC button
     var style = document.createElement('style');
-    style.textContent = '.md-search-highlight { background: #fff3cd; color: #d35400; border-radius: 3px; padding: 1px 2px; } .md-search-current { background: #ff6b6b !important; color: #fff !important; } .md-html-search-bar .md-search-input { width: 40%; min-width: 120px; max-width: 100%; } @media (max-width: 600px) { .md-html-search-bar .md-search-input { width: 90%; min-width: 60px; } }';
+    style.textContent = '.md-search-highlight { background: #fff3cd; color: #d35400; border-radius: 3px; padding: 1px 2px; } .md-search-current { background: #ff6b6b !important; color: #fff !important; } .md-html-search-bar .md-search-input { width: 40%; min-width: 120px; max-width: 100%; } .floating-toc-btn { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border-radius: 50%; background: #ff6b6b; color: #fff; border: none; font-size: 24px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 999; transition: background 0.3s, transform 0.2s; } .floating-toc-btn:hover { background: #ff5252; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); } .floating-toc-btn:active { transform: translateY(0); } @media print { .floating-toc-btn { display: none !important; } } @media (max-width: 600px) { .md-html-search-bar .md-search-input { width: 90%; min-width: 60px; } .floating-toc-btn { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 20px; } }';
     document.head.appendChild(style);
 
     // Flowchart rendering using mermaid.js
