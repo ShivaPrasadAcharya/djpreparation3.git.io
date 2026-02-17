@@ -1,6 +1,6 @@
 // dataWmarkdown3.js
 window.noteU33Content = `
-3.c.2 # Rationale Behind Professional Independence of Prosecutors
+ # Rationale Behind Professional Independence of Prosecutors
 
 ## INTRODUCTION: THE UNIQUE POSITION OF PROSECUTORS
 
