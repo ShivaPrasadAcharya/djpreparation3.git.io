@@ -1,5 +1,5 @@
-// datanoteU00.js
-window.noteU00Content = `
+// datanoteU36.js
+window.noteU36Content = `
 
     # ⚖️ PLEA OF ALIBI
 ### LLM Notes · Criminal Law & Evidence · India / Nepal
@@ -360,7 +360,7 @@ NEW REGIME (BSA + BNSS 2023)
 
 
 `;
-window.noteU00Meta = {
-  name: "JP-no",
-  emoji: "§📒no"
+window.noteU36Meta = {
+  name: "Alibi-for trial",
+  emoji: "📒"
 };
