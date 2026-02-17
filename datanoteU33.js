@@ -2971,7 +2971,7 @@ That means you're likely already doing the hard work of seeking justice.
 
 ## 🌳 DOCTRINE TREE
 
-```
+<pre>
 PLEA OF ALIBI  ⚖  (Evidentiary Doctrine — S.11 IEA / BSA 2023)
          │
          ├── 1. CONCEPTUAL FOUNDATION
@@ -3011,13 +3011,13 @@ PLEA OF ALIBI  ⚖  (Evidentiary Doctrine — S.11 IEA / BSA 2023)
                   ├── 7.1  Problem A — Basic (Wedding alibi, Delhi/Lucknow)
                   ├── 7.2  Problem B — Intermediate (CDR/Phone tower, Nepal)
                   └── 7.3  Problem C — Advanced (Three co-accused, terror case)
-```
+</pre>
 
 ---
 
 ## 🔄 LOGICAL FLOW
 
-```
+<pre>
 CRIMINAL CHARGE AGAINST ACCUSED
          ↓  [Step 1]
 PROSECUTION establishes Accused's Presence
@@ -3035,7 +3035,7 @@ COURT assesses on Balance of Probabilities
          ↓  [Two possible outcomes]
          ├── ✓ ALIBI ACCEPTED → Reasonable Doubt Raised → Acquittal
          └── ✗ ALIBI REJECTED → Prosecution Case Stands → Conviction
-```
+</pre>
 
 ---
 
@@ -3163,7 +3163,7 @@ COURT assesses on Balance of Probabilities
 
 ### 4.2 Types of Alibi Evidence
 
-```
+<pre>
 ALIBI EVIDENCE TYPES
          │
          ├── 👥 ORAL / WITNESS   → Employer, co-worker, neighbour (independent > family)
@@ -3174,11 +3174,11 @@ ALIBI EVIDENCE TYPES
          ├── 📡 GPS DATA         → Google Timeline, vehicle GPS, fitness trackers
          ├── 📷 CCTV             → S.65B IEA / BSA certificate mandatory
          └── 💳 FINANCIAL        → ATM / card transaction logs at another location
-```
+</pre>
 
 ### 4.3 Digital & Electronic Alibi
 
-```
+<pre>
 DIGITAL ALIBI EVIDENCE
          │
          ├── CDR (Call Detail Records)
@@ -3192,7 +3192,7 @@ DIGITAL ALIBI EVIDENCE
                   ├── Fabricated CCTV footage using AI-generated video
                   ├── Manipulated GPS metadata / altered timestamps
                   └── Courts requiring forensic expert certification
-```
+</pre>
 
 ### 4.4 Common Pitfalls
 
@@ -3234,7 +3234,7 @@ DIGITAL ALIBI EVIDENCE
 
 ### 6.1 Procedural Change: IEA/CrPC → BSA/BNSS 2023
 
-```
+<pre>
 OLD REGIME (IEA + CrPC 1973)
          ├── No formal advance notice required for alibi
          ├── Late alibi viewed with suspicion (judicial interpretation only)
@@ -3247,7 +3247,7 @@ NEW REGIME (BSA + BNSS 2023)
          ├── S.11 BSA 2023 — Retains relevancy of alibi
          ├── S.107 BSA — Burden on accused (replaces S.103 IEA)
          └── Updated electronic evidence certification standards
-```
+</pre>
 
 ### 6.2 Digital Alibi & AI Concerns
 
