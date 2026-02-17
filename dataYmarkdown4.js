@@ -359,6 +359,6 @@ NEW REGIME (BSA + BNSS 2023)
 
 `;
 window.markdown4Meta = { 
-  name: " sample-copyable",
+  name: "alibi",
    emoji: "📄"
    };
