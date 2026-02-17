@@ -24,7 +24,7 @@
         },
         {
             key: 'noteU3', label: 'Criminal', items: [
-                ...['noteU31', 'noteU32', 'noteU33', 'noteU34', 'noteU35'].map(k => ({
+                ...['noteU31', 'noteU32', 'noteU33', 'noteU34', 'noteU35', 'noteU36'].map(k => ({
                     key: k,
                     label: (window[`${k}Meta`]?.name || k.replace('noteU', 'NoteU')),
                     emoji: window[`${k}Meta`]?.emoji || '',
