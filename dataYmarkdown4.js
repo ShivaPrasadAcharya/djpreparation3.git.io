@@ -210,11 +210,11 @@ ALIBI EVIDENCE TYPES
          ├── 📡 GPS DATA         → Google Timeline, vehicle GPS, fitness trackers
          ├── 📷 CCTV             → S.65B IEA / BSA certificate mandatory
          └── 💳 FINANCIAL        → ATM / card transaction logs at another location
-```
+</pre>
 
 ### 4.3 Digital & Electronic Alibi
 
-```
+<pre>
 DIGITAL ALIBI EVIDENCE
          │
          ├── CDR (Call Detail Records)
